@@ -13,8 +13,6 @@
 		<!-- Responsive -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-		
-		
 	</head>
 
 	<body>
@@ -35,7 +33,7 @@
 			
 			<div style="justify-content:center; display:flex;">
 					<a id="download1" onclick="downloadApp1()" class="downloadBtn1 btn-style-three">Apple AppStore</a>
-					<a id="download2" onclick="downloadApp2()" class="downloadBtn2 btn-style-three">Amazon AppStore</a>
+					<!-- <a id="download2" onclick="downloadApp2()" class="downloadBtn2 btn-style-three">Amazon AppStore</a> -->
 			</div>
 		</div>
 
@@ -50,9 +48,8 @@
 
 				let href = ""
 				if (isAndroid) {
-					href = "https://huanxin-test666.oss-cn-hangzhou.aliyuncs.com/changweixiu/weixiu__UNI__ED849F8__20230221154646.apk"
 				} else {
-					href = "itms-services://?action=download-manifest&url=https://huanxin-test666.oss-cn-hangzhou.aliyuncs.com/changweixiu/download/iosIndex.plist"
+					href = "https://apps.apple.com/cn/app/id6476460472"
 				}
 				document.getElementById("download1").href = href
 			}
@@ -64,12 +61,9 @@
 				var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
 				let content = isAndroid ? "是安卓" : "是iOS"
 
-
 				let href = ""
 				if (isAndroid) {
-					href = "https://huanxin-test666.oss-cn-hangzhou.aliyuncs.com/changweixiu/shouli__UNI__C3C8BE5__20230221154602.apk"
-				} else {
-					href = "itms-services://?action=download-manifest&url=https://huanxin-test666.oss-cn-hangzhou.aliyuncs.com/changweixiu/download/iosIndex1.plist"
+					href = ""
 				}
 				document.getElementById("download2").href = href
 			}
