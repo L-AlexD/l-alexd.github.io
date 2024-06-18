@@ -28,45 +28,47 @@
 					<img class="image1" src="images/image6.png">
 					<img class="image1" src="images/image7.png">
 					
-					<div>.</div>
+					<div style="color:white;">.</div>
 					<div style="justify-content:center; display:flex;">Contact us: alan2938212@gmail.com</div>
-					<div>.</div>
+					<div style="color:white;">.</div>
 				</div>
-				
 			</div>
 			
 			<div style="justify-content:center; display:flex;">
-					<a id="download1" onclick="downloadApp1()" class="downloadBtn1 btn-style-three">Apple AppStore</a>
-					<!-- <a id="download2" onclick="downloadApp2()" class="downloadBtn2 btn-style-three">Amazon AppStore</a> -->
+				<a class="downloadBtn1" id="download1" onclick="downloadApp1()" >
+					<img class="os_logo" src="images/apple_logo.png">
+					<div class="btn-style-three">&ensp;Apple</div>
+					<div class="btn-style-three" style="left:14px;">AppStore</div>
+				</a>
+				<a class="downloadBtn2" id="download2" onclick="downloadApp2()">
+					<img class="os_logo" src="images/android_logo.png">
+					<div class="btn-style-three">&ensp;Amazon</div>
+					<div class="btn-style-three" style="left:12px;">AppStore</div>
+				</a>
 			</div>
+			
 		</div>
 
 		<script>
 			function downloadApp1() {
 				console.log("downloadApp1")
+				
 				var u = navigator.userAgent;
 				var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
 				let content = isAndroid ? "是安卓" : "是iOS"
 
-
-				let href = ""
-				if (isAndroid) {
-				} else {
-					href = "https://apps.apple.com/cn/app/id6476460472"
-				}
+				let href = "https://apps.apple.com/cn/app/id6476460472"
 				document.getElementById("download1").href = href
 			}
 
 			function downloadApp2() {
 				console.log("downloadApp2")
+				
 				var u = navigator.userAgent;
 				var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
 				let content = isAndroid ? "是安卓" : "是iOS"
 
-				let href = ""
-				if (isAndroid) {
-					href = ""
-				}
+				let href = "https://www.amazon.com/dp/B0D5RKYPCR"
 				document.getElementById("download2").href = href
 			}
 		</script>
